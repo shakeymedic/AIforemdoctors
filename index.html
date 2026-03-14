@@ -403,6 +403,172 @@ nav {
 }
 .qg-text { font-family: 'Outfit', sans-serif; font-size: 0.88rem; color: var(--ink2); font-weight: 400; line-height: 1.6; }
 
+/* VERSION TAG */
+.version-tag {
+  background: rgba(45,106,79,0.1); color: var(--accent);
+  border: 1px solid rgba(45,106,79,0.25); border-radius: 1rem;
+  padding: 0.1rem 0.65rem;
+  font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 600;
+}
+
+/* PATHWAY CARDS */
+.pathway-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+  margin-top: 2rem;
+}
+.pathway-card {
+  background: var(--white); padding: 1.75rem 1.4rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  transition: background 0.15s;
+}
+.pathway-card:hover { background: #FDFCFB; }
+.pathway-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.pathway-who {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--ink);
+}
+.pathway-desc {
+  font-size: 0.88rem; color: var(--ink2); line-height: 1.65; font-weight: 300;
+  font-family: 'Source Serif 4', serif; flex: 1;
+}
+.pathway-links {
+  display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.5rem;
+  padding-top: 0.75rem; border-top: 1px solid var(--rule);
+}
+.pathway-link {
+  font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+}
+.pathway-link::before { content: '→'; opacity: 0.6; }
+.pathway-link:hover { text-decoration: underline; }
+
+/* EXERCISES */
+.exercises-block {
+  margin-top: 2.5rem; padding-top: 2rem; border-top: 2px dashed var(--rule);
+}
+.exercises-block h3 {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.exercises-block h3::after {
+  content: ''; flex: 1; height: 1px; background: var(--rule);
+}
+.exercise-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.exercise-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--rule); padding: 1rem 1.25rem;
+}
+.alt-bg .exercise-item { background: var(--cream); }
+.ex-num {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.72rem;
+  color: var(--accent); background: rgba(45,106,79,0.1);
+  min-width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ex-text { font-size: 0.92rem; color: var(--ink2); line-height: 1.7; font-weight: 300; }
+.ex-text strong { color: var(--ink); font-weight: 600; }
+
+/* PROMPTING PRINCIPLES */
+.principle-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 1.5rem 0;
+}
+.principle-card {
+  background: var(--white); padding: 1.5rem 1.6rem;
+}
+.principle-card h4 {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.9rem;
+  color: var(--ink); margin-bottom: 0.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.principle-card p { font-size: 0.92rem; color: var(--ink2); line-height: 1.8; font-weight: 300; margin: 0; }
+.p-num {
+  font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem;
+  color: var(--rule); flex-shrink: 0; line-height: 1;
+}
+
+.before-after {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule); margin: 1rem 0;
+}
+.ba-col { padding: 1rem 1.25rem; }
+.ba-col.bad  { background: #FEF2F2; }
+.ba-col.good { background: #F0FDF4; }
+.ba-label {
+  font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem;
+  display: block;
+}
+.ba-col.bad  .ba-label { color: #DC2626; }
+.ba-col.good .ba-label { color: #16A34A; }
+.ba-text { font-family: 'Outfit', sans-serif; font-size: 0.86rem; color: var(--ink); line-height: 1.6; }
+
+/* CRITICAL THINKING */
+.error-type-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 1.5rem 0;
+}
+.error-type {
+  background: var(--white); padding: 1.4rem;
+}
+.alt-bg .error-type { background: var(--cream); }
+.error-type h5 {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+  color: var(--ink); margin-bottom: 0.4rem;
+}
+.error-type p { font-size: 0.88rem; color: var(--ink2); line-height: 1.7; font-weight: 300; margin: 0; }
+.error-tag {
+  display: inline-block; font-family: 'Outfit', sans-serif; font-size: 0.62rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.12rem 0.5rem; border-radius: 1rem; margin-bottom: 0.5rem;
+}
+.tag-red    { background: rgba(220,38,38,0.1);  color: #B91C1C; border: 1px solid rgba(220,38,38,0.2); }
+.tag-amber  { background: rgba(217,119,6,0.1);  color: #92400E; border: 1px solid rgba(217,119,6,0.2); }
+.tag-blue   { background: rgba(66,133,244,0.1); color: #1D4ED8; border: 1px solid rgba(66,133,244,0.2); }
+
+/* CHANGELOG */
+.changelog-section {
+  background: var(--white); border-top: 1px solid var(--rule);
+  padding: 3rem 2.5rem;
+}
+.changelog-inner { max-width: 800px; margin: 0 auto; }
+.changelog-inner h3 {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink3);
+  margin-bottom: 1.5rem;
+}
+.changelog-entry {
+  display: grid; grid-template-columns: 110px 1fr; gap: 1.5rem;
+  padding: 0.85rem 0; border-bottom: 1px solid var(--rule); align-items: baseline;
+}
+.changelog-entry:last-child { border-bottom: none; }
+.cl-date {
+  font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--ink3); white-space: nowrap;
+}
+.cl-note { font-family: 'Outfit', sans-serif; font-size: 0.85rem; color: var(--ink2); line-height: 1.6; }
+.cl-badge {
+  display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 0.1rem 0.45rem; border-radius: 1rem;
+  margin-right: 0.4rem; vertical-align: middle;
+}
+.cl-new      { background: rgba(52,168,83,0.12); color: var(--notebooklm); border: 1px solid rgba(52,168,83,0.25); }
+.cl-updated  { background: rgba(66,133,244,0.1); color: var(--gemini);     border: 1px solid rgba(66,133,244,0.25); }
+.cl-fixed    { background: rgba(212,168,83,0.12); color: #92630A;          border: 1px solid rgba(212,168,83,0.3); }
+
+@media (max-width: 900px) {
+  .pathway-grid      { grid-template-columns: repeat(2, 1fr); }
+  .principle-grid    { grid-template-columns: 1fr; }
+  .error-type-grid   { grid-template-columns: 1fr; }
+  .before-after      { grid-template-columns: 1fr; }
+  .changelog-entry   { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+@media (max-width: 600px) {
+  .pathway-grid { grid-template-columns: 1fr; }
+}
+
 /* AGENTIC BROWSERS */
 .agentic-intro { font-size: 1rem; color: var(--ink2); line-height: 1.95; font-weight: 300; margin-bottom: 2rem; max-width: 700px; }
 
@@ -494,14 +660,17 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
   <a href="#top" class="nav-brand">AI for EM Doctors</a>
   <ul class="nav-links">
     <li><a href="#tools">Overview</a></li>
+    <li><a href="#pathways">Start here</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#qip">QIP & Data</a></li>
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#organisation">Organisation</a></li>
-    <li><a href="#deep-dive">Tool Guides</a></li>
-    <li><a href="#agentic">Agentic Browsers</a></li>
-    <li><a href="#start">Get Started</a></li>
+    <li><a href="#prompting">Prompting</a></li>
+    <li><a href="#critical">Critical thinking</a></li>
+    <li><a href="#deep-dive">Tool guides</a></li>
+    <li><a href="#agentic">Agentic</a></li>
+    <li><a href="#start">Get started</a></li>
   </ul>
 </nav>
 
@@ -515,10 +684,12 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       <span class="dot">·</span>
       <span>ST6 Emergency Medicine, Birmingham Heartlands Hospital</span>
       <span class="dot">·</span>
-      <span>Written with AI assistance · 2025–2026</span>
+      <span>Written with AI assistance</span>
+      <span class="dot">·</span>
+      <span class="version-tag">Version 2.0 · March 2026</span>
     </div>
     <p class="hero-desc">
-      A practical guide to the six AI tools that are most useful for EM doctors in their day-to-day professional work — focused on portfolio, research, quality improvement, teaching, and organisation, rather than direct clinical decision-making.
+      A practical guide to the six AI tools most useful for EM doctors in their day-to-day professional work — covering portfolio, research, quality improvement, teaching, and organisation. Includes a prompting guide, critical appraisal skills for AI output, and a section on agentic browsers. Not about clinical decision support.
     </p>
     <div class="tools-row">
       <span class="tool-pill perplexity"><span class="tool-dot"></span>Perplexity</span>
@@ -585,6 +756,71 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
 </div>
 </div>
 
+<!-- ═══════════════════════════════════════ PATHWAYS ═══════ -->
+<div id="pathways">
+<div class="page-wrap">
+<section class="main-section" style="padding-top:3rem;">
+
+  <div class="section-header">
+    <span class="section-num" style="color:var(--rule);">→</span>
+    <div>
+      <span class="section-label">Start Here</span>
+      <h2 class="section-title">Where to start, depending on who you are</h2>
+      <p class="section-intro-text">This guide covers a lot of ground. These four pathways cut straight to what is most useful for your situation — follow the links for the two or three sections that matter most to you right now.</p>
+    </div>
+  </div>
+
+  <div class="pathway-grid">
+    <div class="pathway-card">
+      <div class="pathway-icon">🌱</div>
+      <div class="pathway-who">New to AI tools</div>
+      <p class="pathway-desc">You have heard of ChatGPT but haven't used AI for professional work yet. You are perhaps a little anxious about it. Start here for a low-stakes, high-return first experience.</p>
+      <div class="pathway-links">
+        <a href="#tools" class="pathway-link">Overview — what each tool does</a>
+        <a href="#prompting" class="pathway-link">Prompting principles first</a>
+        <a href="#portfolio" class="pathway-link">Portfolio — the easiest entry point</a>
+        <a href="#start" class="pathway-link">Get started — practical first steps</a>
+      </div>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">📋</div>
+      <div class="pathway-who">Trainee with portfolio pressure</div>
+      <p class="pathway-desc">You are an ST1–ST6 with ARCP approaching, QIP to complete, or FRCEM revision to do. You need things that save time on real tasks, now.</p>
+      <div class="pathway-links">
+        <a href="#portfolio" class="pathway-link">Portfolio &amp; reflective practice</a>
+        <a href="#qip" class="pathway-link">QIP &amp; data analysis</a>
+        <a href="#teaching" class="pathway-link">Teaching &amp; FRCEM revision</a>
+        <a href="#prompting" class="pathway-link">Prompting principles</a>
+      </div>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">🔬</div>
+      <div class="pathway-who">Research or QI focused</div>
+      <p class="pathway-desc">You have audit data to analyse, a systematic review to appraise, or a journal club to prepare. You want the tools that save hours on evidence work.</p>
+      <div class="pathway-links">
+        <a href="#research" class="pathway-link">Research &amp; evidence</a>
+        <a href="#qip" class="pathway-link">QIP &amp; data analysis</a>
+        <a href="#deep-dive" class="pathway-link">Perplexity &amp; Claude tool guides</a>
+        <a href="#critical" class="pathway-link">Critical appraisal of AI output</a>
+      </div>
+    </div>
+    <div class="pathway-card">
+      <div class="pathway-icon">🏥</div>
+      <div class="pathway-who">Consultant or senior clinician</div>
+      <p class="pathway-desc">You are sceptical and appropriately cautious. You want to understand what this means for your department, your trainees, and your professional obligations before committing to anything.</p>
+      <div class="pathway-links">
+        <a href="#critical" class="pathway-link">Critical thinking about AI output</a>
+        <a href="#deep-dive" class="pathway-link">Microsoft Copilot — NHS context</a>
+        <a href="#organisation" class="pathway-link">Organisation &amp; governance</a>
+        <a href="#tools" class="pathway-link">Overview — understand the landscape</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+</div>
+</div>
+
 <!-- ═══════════════════════════════════════ 01 PORTFOLIO ═══════ -->
 <div id="portfolio" class="alt-bg">
 <div class="page-wrap">
@@ -631,6 +867,16 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       </div>
     </div>
   </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>The three-minute reflection.</strong> Open your phone's notes app after your next shift. Write four or five bullet points about a case or interaction that stuck with you — rough, unpolished, no structure. Paste them into Claude with the Gibbs prompt from this section. See what comes back.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>ARCP gap check.</strong> Write a rough summary of your last three months' portfolio entries (a few sentences per entry is enough). Ask Claude to map them against the RCEM curriculum and identify where you are thin. If the output surprises you, that is useful information before your ARCP, not after.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Tone test.</strong> Think of a professional email you have been putting off writing — a difficult request, an awkward follow-up, a disagreement. Ask Claude to draft it. Notice how it handles the tone. Edit it into your own voice. Compare how long that took versus writing it from scratch.</div></div>
+    </div>
+  </div>
+
 </section>
 </div>
 </div>
@@ -685,6 +931,16 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       </div>
     </div>
   </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>Literature question, right now.</strong> Think of a clinical question you have been meaning to look up — something you encountered recently and didn't have time to explore. Go to Perplexity, switch to Academic mode, and ask it. Check two or three of the citations by clicking through. Notice how this differs from a PubMed search.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>Journal club prep in 20 minutes.</strong> If you have a paper to present or discuss soon, upload it to NotebookLM. Generate an Audio Overview and listen to it on your commute. Then upload the same paper to Claude and ask for a CASP appraisal. Compare what each tool gives you.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>The hallucination test.</strong> Ask Claude or ChatGPT to give you five references on a specific clinical topic. Then search for every single one in PubMed. Note which ones exist, which are plausible but wrong, and which are entirely fabricated. This exercise is uncomfortable — and that discomfort is exactly the point. Do this once and you will never forget to verify.</div></div>
+    </div>
+  </div>
+
 </section>
 </div>
 </div>
@@ -742,6 +998,16 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       </div>
     </div>
   </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>Your first Code Interpreter session.</strong> Export any spreadsheet of data you have — even something simple like compliance figures or attendance numbers — as a CSV. Upload it to ChatGPT Plus with a plain-English question: "What's the trend over time?" and "Can you produce a chart?" This takes five minutes and demonstrates the capability more effectively than any description.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>SMART aim refinement.</strong> Write your current QIP aim — or the rough idea for one — in one or two sentences, however vague. Ask Claude to turn it into a SMART aim that meets RCEM SLO 11 requirements. If it produces something you didn't intend, that tells you something useful about how clearly you had articulated the project to yourself.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Fishbone in three minutes.</strong> Ask ChatGPT: "Generate a fishbone diagram using the 6M framework for the problem of delayed door-to-antibiotic time in the ED. Output in Mermaid syntax." Paste the result into mermaid.live. You now have a rendered, exportable fishbone diagram. Total time: under five minutes.</div></div>
+    </div>
+  </div>
+
 </section>
 </div>
 </div>
@@ -802,6 +1068,16 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       </div>
     </div>
   </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>NotebookLM commute test.</strong> Upload one NICE guideline or RCEM best practice document to NotebookLM. Generate an Audio Overview. Listen to it on your drive or commute. Then return to the notebook and ask it three specific questions about the guideline's ED-relevant recommendations. Notice what it gets right, what it oversimplifies, and crucially — whether it stays within the source or starts adding things that weren't there.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>Socratic five minutes.</strong> Open Claude on your phone. Type: "Act as an FRCEM examiner. Ask me one viva question on [choose a topic you find difficult]. After I answer, tell me what I got right and what I missed, then ask a follow-up." Try it for five minutes between jobs. This is arguably the highest-return use of five spare minutes available to an EM trainee.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Session plan in ten minutes.</strong> You have a teaching commitment coming up. Open Claude and use the session design prompt from this section with your actual topic and audience. Time how long it takes from blank page to a complete session outline. Edit what you don't like. Keep what works. The point is not to use it uncritically — it's to understand where in the process it saves you time and where it doesn't.</div></div>
+    </div>
+  </div>
+
 </section>
 </div>
 </div>
@@ -856,6 +1132,251 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       </div>
     </div>
   </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>The email experiment.</strong> Write your next routine professional email — rota query, supervision request, meeting rearrangement — entirely with AI assistance. Describe what you need in one sentence to Claude or Gemini/Copilot in your email client. Edit the result into your voice. Time the whole process. Most people find this takes under two minutes once they stop feeling odd about it.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>Meeting notes to action plan.</strong> After your next governance meeting, MDT, or supervision session, write rough notes as you normally would. Before you do anything else with them, paste them into Claude and ask for "a structured summary with a numbered action list, owner for each action, and suggested deadline." Compare the result to what you would have produced yourself. Notice what it catches that you might have let drift.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Weekly evidence update.</strong> Open Perplexity. Search: "What new evidence or guideline updates relevant to emergency medicine have been published in the last month?" Read the synthesis and click through to two or three of the sources. Set a five-minute calendar block each week to repeat this. This is your literature radar — low effort, high awareness.</div></div>
+    </div>
+  </div>
+
+</section>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ PROMPTING PRINCIPLES ═══════ -->
+<div id="prompting">
+<div class="page-wrap">
+<section class="main-section">
+
+  <div class="section-header">
+    <span class="section-num">P</span>
+    <div>
+      <span class="section-label">Prompting Principles</span>
+      <h2 class="section-title">Why good prompting matters — and how to do it</h2>
+      <p class="section-intro-text">Knowing a tool exists and being fluent with it are different things. This section explains the four underlying principles that make the difference between prompts that produce impressive outputs and prompts that produce mediocre ones. Understanding <em>why</em> these principles work — not just that they work — lets you apply them to any AI tool, any task, in any situation.</p>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="prose">
+
+      <h3>Why prompting skill matters</h3>
+      <p>All of these AI tools are, at their core, next-word prediction systems that have been trained to be helpful. They have no inherent understanding of your situation, your role, or what you actually need. Everything they know about your specific task comes from what you tell them in the prompt. The more precisely and completely you communicate your context, purpose, and constraints, the better the output will be.</p>
+      <p>The most common reason a doctor abandons an AI tool after one or two attempts is that they used a vague prompt, got a generic response, concluded "it doesn't work," and stopped. The tool wasn't the problem. What follows are the four principles that prevent this.</p>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <h4><span class="p-num">1</span> Role and context first</h4>
+          <p>Tell the model who you are and what the output is for before you ask it to do anything. This single change produces the largest improvement in output quality. "I am an ST5 emergency medicine registrar in the UK preparing for an ARCP" fundamentally changes every response compared to asking the same question with no context. The model uses your stated role to calibrate depth, terminology, assumed knowledge, and relevance.</p>
+        </div>
+        <div class="principle-card">
+          <h4><span class="p-num">2</span> Specify the format explicitly</h4>
+          <p>Tell the model exactly what you want it to produce — not just the topic, but the structure, length, audience, and purpose. "Write a Gibbs reflection" is better than "help me reflect." "Produce a 250-word structured abstract suitable for an RCEM portfolio submission" is better than "write a summary." The model cannot guess your intended format and will default to something generic unless you specify.</p>
+        </div>
+        <div class="principle-card">
+          <h4><span class="p-num">3</span> Constrain what it should not do</h4>
+          <p>Negative constraints are underused and highly effective. Telling the model what to avoid is often as important as telling it what to produce. "Do not add clinical details not in my notes" prevents hallucination in reflective writing. "Do not use bullet points — write in prose" controls format. "Do not speculate beyond the uploaded document" keeps analysis grounded. Constraints narrow the model's degrees of freedom toward the output you actually want.</p>
+        </div>
+        <div class="principle-card">
+          <h4><span class="p-num">4</span> Iterate, do not restart</h4>
+          <p>The most common mistake after receiving an unsatisfactory response is abandoning the conversation and starting again. This throws away the accumulated context. Instead, follow up within the same conversation: "This is close but the tone is too formal — rewrite it to sound more like spoken English." "The second paragraph is too long — condense it to three sentences." "You missed the point about X — revise the conclusion to address this." Each iteration costs seconds and moves toward a far better output than any single prompt will produce.</p>
+        </div>
+      </div>
+
+      <h3>Seeing the difference: the same request, two ways</h3>
+      <p>Here is the same underlying request — help drafting a reflective log — written first as a typical first attempt, and then applying all four principles.</p>
+
+      <div class="before-after">
+        <div class="ba-col bad">
+          <span class="ba-label">❌ Typical first attempt</span>
+          <div class="ba-text">Can you help me write a reflection about a difficult case?</div>
+        </div>
+        <div class="ba-col good">
+          <span class="ba-label">✓ Applying all four principles</span>
+          <div class="ba-text">I am an ST3 emergency medicine registrar in the UK. I need to write a portfolio reflective log using Gibbs' Reflective Cycle for my ARCP. Here are my rough notes from a difficult resuscitation last week: [notes]. Structure these into a Gibbs reflection. Keep my voice and do not add any clinical details that are not in my notes. Where my reflection is thin, ask me questions to help me develop it — do not fill in the gaps yourself. Keep the total length to around 400 words.</div>
+        </div>
+      </div>
+
+      <div class="before-after">
+        <div class="ba-col bad">
+          <span class="ba-label">❌ Vague data request</span>
+          <div class="ba-text">Can you analyse my audit data?</div>
+        </div>
+        <div class="ba-col good">
+          <span class="ba-label">✓ Specific and constrained</span>
+          <div class="ba-text">I have uploaded a CSV. It has three columns: date (DD/MM/YYYY format), time_to_antibiotic_minutes (integer), and shift (one of: day, evening, night). Calculate the median and IQR for the whole dataset. Then break down the median by shift type and by day of week. Show the results as a table and as a bar chart. Do not produce any other statistics unless I ask.</div>
+        </div>
+      </div>
+
+      <h3>One more principle: give it room to push back</h3>
+      <p>These tools are calibrated to be helpful, which sometimes means they agree with you too readily or produce what you seem to want rather than what you actually need. Explicitly inviting critical feedback changes this. Adding "identify the weaknesses in this argument" or "tell me what I've missed" or "what would a sceptical reviewer object to?" gives the model permission to be genuinely useful rather than merely agreeable. This is particularly valuable for drafts of QIP reports, portfolio submissions, and research writing.</p>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>The four principles at a glance</h4>
+        <ul>
+          <li><span class="li-i">1</span><strong>Role and context first</strong> — who you are and what the output is for</li>
+          <li><span class="li-i">2</span><strong>Specify the format</strong> — structure, length, audience, purpose</li>
+          <li><span class="li-i">3</span><strong>Constrain what to avoid</strong> — negative constraints prevent the most common failures</li>
+          <li><span class="li-i">4</span><strong>Iterate, don't restart</strong> — follow up within the same conversation</li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <h4>Quick prompt checklist</h4>
+        <ul>
+          <li><span class="li-i">→</span>Have you told it your role and specialty?</li>
+          <li><span class="li-i">→</span>Have you specified the exact format you want?</li>
+          <li><span class="li-i">→</span>Have you told it what not to do?</li>
+          <li><span class="li-i">→</span>Have you given it a length target?</li>
+          <li><span class="li-i">→</span>Have you named the audience for the output?</li>
+          <li><span class="li-i">→</span>If unsatisfied — have you iterated rather than restarted?</li>
+        </ul>
+      </div>
+      <div class="highlight">
+        <h4>The broader principle</h4>
+        <p>These four principles work because they reduce the gap between what you have in your head and what the model has to work with. The model can only produce what you communicate. Prompting fluency is the skill of closing that gap.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>Compare two prompts.</strong> Take any task from this guide — a reflective log, a session plan, a data analysis. Write it as you would naturally, then rewrite it applying all four principles. Submit both to the same AI tool and compare the outputs. The difference will be immediate and instructive.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>Iteration practice.</strong> After your next AI response that isn't quite right, resist the urge to start over. Instead, write one follow-up message addressing specifically what was wrong. Then another. See how close you can get to the ideal output within a single conversation. Three iterations of a mediocre prompt will usually beat starting over.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Ask for pushback.</strong> Take something you have written recently — a reflection, an email, a QIP aim. Paste it into Claude and ask: "What are the weaknesses in this? What would a critical reviewer object to?" Notice whether the criticism is useful. If it is, this becomes a standard step in your drafting workflow.</div></div>
+    </div>
+  </div>
+
+</section>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ CRITICAL THINKING ═══════ -->
+<div id="critical" class="alt-bg">
+<div class="page-wrap">
+<section class="main-section">
+
+  <div class="section-header">
+    <span class="section-num">C</span>
+    <div>
+      <span class="section-label">Critical Appraisal of AI Output</span>
+      <h2 class="section-title">How to think critically about what AI tells you</h2>
+      <p class="section-intro-text">Using AI tools well is not just about getting good outputs — it's about knowing when to trust those outputs and when to be sceptical. This is a learnable cognitive skill, analogous to critical appraisal of the medical literature. These tools fail in predictable ways, and understanding how they fail makes you a significantly more effective and safer user.</p>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="prose">
+
+      <h3>The three failure modes to know</h3>
+      <p>Every AI output failure that matters in professional use falls into one of three categories. Each has a distinct character and a different mitigation strategy.</p>
+
+      <div class="error-type-grid">
+        <div class="error-type">
+          <span class="error-tag tag-red">Highest risk</span>
+          <h5>Hallucination — confident fabrication</h5>
+          <p>The model generates factually incorrect information with full confidence. Most commonly: fabricated references (plausible authors, journals, and DOIs that do not exist), invented statistics, and non-existent guidelines. The output reads as authoritative and is wrong. <strong>Mitigation: verify every factual claim against a primary source before relying on it.</strong></p>
+        </div>
+        <div class="error-type">
+          <span class="error-tag tag-amber">Medium risk</span>
+          <h5>Sycophancy — agreeing too readily</h5>
+          <p>The model agrees with your premise even when your premise is wrong, or produces the answer it thinks you want rather than the accurate one. If you present a flawed argument and ask it to improve it, it may improve the writing without flagging the flaw. <strong>Mitigation: explicitly ask it to critique, challenge, or find weaknesses — don't just ask it to agree or improve.</strong></p>
+        </div>
+        <div class="error-type">
+          <span class="error-tag tag-blue">Lower but real risk</span>
+          <h5>Confidently outdated — training cutoffs</h5>
+          <p>Models are trained on data up to a cutoff date and have no knowledge of more recent events, guideline updates, or new evidence. They will answer questions about current guidelines with apparent authority even when those guidelines have changed. <strong>Mitigation: use Perplexity (which searches in real time) for anything requiring current information.</strong></p>
+        </div>
+      </div>
+
+      <h3>Recognising hallucination in practice</h3>
+      <p>Hallucinated references are the most common and most consequential failure for clinical professionals. They follow a recognisable pattern: the author names sound plausible, the journal is credible, the year is recent, the title is specific and relevant. The paper simply does not exist. Hallucinated statistics have a similar character — precise, plausible, and wrong.</p>
+
+      <p>The practical test is simple: before including any AI-provided reference, search for it in PubMed using the exact title and lead author. If it is not there, it is not real. Do not search by topic and conclude "well, something similar probably exists." Search for the specific paper. There is no shortcut to this step.</p>
+
+      <div class="prompt">
+        <div class="prompt-label">Prompts that actively reduce hallucination risk</div>
+        <div class="prompt-text">
+          "If you are not certain about a fact, say so explicitly rather than guessing."<br><br>
+          "Do not cite specific papers or statistics unless you are confident they exist. If you are unsure, say 'I believe there is evidence for this but you should verify' rather than providing a reference."<br><br>
+          "Only answer from the document I have uploaded. If the document does not address this question, say so."
+        </div>
+      </div>
+
+      <h3>The accountability question</h3>
+      <p>The GMC's 2024 guidance is clear on a point that is easy to overlook when a polished AI output is in front of you: <strong>you remain professionally responsible for every piece of work you submit, present, or act upon, regardless of whether it was assisted by AI.</strong> An AI-drafted reflective log that misrepresents your experience is a misrepresentation. An AI-generated slide that contains a fabricated statistic, which you present to colleagues, is your error. An AI-produced drug calculation that contains a mathematical mistake is your mistake if you did not check it.</p>
+
+      <p>This is not an argument against using AI. It is an argument for using it with the same critical appraisal you apply to any source — which is to say, actively and sceptically, not passively.</p>
+
+      <h3>Calibrating appropriate trust by task type</h3>
+      <p>Different tasks carry different risk profiles for AI errors, and your verification effort should scale accordingly.</p>
+
+      <table class="uc-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Error risk</th>
+            <th>Appropriate verification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Structuring a reflection you have already written</td><td>Low — you are providing the facts</td><td>Read for accuracy to your original notes; no external verification needed</td></tr>
+          <tr><td>Drafting a professional email</td><td>Low — factual content is yours</td><td>Read for tone and accuracy; brief review sufficient</td></tr>
+          <tr><td>Summarising an uploaded document</td><td>Low-medium — grounded in source</td><td>Cross-check key claims against the original document</td></tr>
+          <tr><td>Generating a literature overview</td><td>High — hallucinated references common</td><td>Verify every cited reference in PubMed before use</td></tr>
+          <tr><td>Statistical analysis of uploaded data</td><td>Medium — calculation errors occur</td><td>Sanity-check outputs; manually verify at least one calculation</td></tr>
+          <tr><td>Answering questions without source material</td><td>High — no grounding constraint</td><td>Treat as a starting point only; verify all specific claims independently</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Towards AI literacy as a professional skill</h3>
+      <p>The medical education literature is beginning to recognise that AI literacy — the ability to evaluate, adopt, and critically appraise AI tools — is a professional skill that belongs in the curriculum, not an optional technical interest. The RCEM curriculum currently contains no explicit AI literacy component. Neither does the GMC's Good Medical Practice framework, though its 2024 guidance gestures towards this.</p>
+      <p>The doctors who will use these tools most effectively are not those who adopt everything uncritically, nor those who reject everything sceptically, but those who bring the same rigorous, evidence-based thinking to AI outputs that they apply to clinical decisions and published research. That disposition — active, critical, calibrated — is what this guide is ultimately trying to build.</p>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>The five-question check</h4>
+        <ul>
+          <li><span class="li-i">1</span><strong>Is this factual claim verifiable?</strong> Have I checked it against a primary source?</li>
+          <li><span class="li-i">2</span><strong>Is this reference real?</strong> Have I searched PubMed for the exact title?</li>
+          <li><span class="li-i">3</span><strong>Does this reflect my actual experience?</strong> (For portfolio work — have I added anything I didn't intend?)</li>
+          <li><span class="li-i">4</span><strong>Is this current?</strong> Could a guideline or evidence base have changed since the model's training?</li>
+          <li><span class="li-i">5</span><strong>Would I stand behind this?</strong> If my name is on it, am I confident in its accuracy?</li>
+        </ul>
+      </div>
+      <div class="sidebar-box">
+        <h4>Professional responsibility — the key principle</h4>
+        <ul>
+          <li><span class="li-i">→</span>You are responsible for everything you submit, present, or act upon</li>
+          <li><span class="li-i">→</span>"The AI wrote it" is not a defence under GMC or RCEM standards</li>
+          <li><span class="li-i">→</span>AI assistance requires the same critical appraisal as any other source</li>
+          <li><span class="li-i">→</span>RCEM Sep 2025: insight and critical thinking must be genuinely the trainee's own</li>
+        </ul>
+      </div>
+      <div class="highlight">
+        <h4>The useful mental model</h4>
+        <p>Treat every AI output the way you would treat information from a very confident, very fast, occasionally unreliable junior colleague. You act on what they tell you — but you verify before you commit, and the responsibility for the decision remains yours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="exercises-block">
+    <h3>Try these this week</h3>
+    <div class="exercise-list">
+      <div class="exercise-item"><div class="ex-num">1</div><div class="ex-text"><strong>The hallucination test (do this once).</strong> Ask any general-purpose AI tool — ChatGPT or Claude — to give you five references on a specific clinical topic in EM. Search every single one in PubMed using the exact title. Note what exists, what is plausible but wrong, and what is entirely invented. This exercise produces a calibrated, lasting scepticism that no description can substitute for.</div></div>
+      <div class="exercise-item"><div class="ex-num">2</div><div class="ex-text"><strong>Sycophancy test.</strong> Write a brief argument about a clinical topic that contains a deliberate error — a wrong threshold, a misattributed guideline. Ask Claude to "review and improve this." See whether it corrects the error or polishes the prose around it. Then add "identify any factual errors in this" and compare the responses. This demonstrates sycophancy concretely and shows you how to mitigate it.</div></div>
+      <div class="exercise-item"><div class="ex-num">3</div><div class="ex-text"><strong>Apply the five-question check.</strong> Take the last piece of AI-assisted output you produced — an email, a reflection draft, a data chart. Run each of the five questions in the sidebar against it. This takes two minutes. If you find something you should have caught, that discomfort is productive — it calibrates your checking habit for next time.</div></div>
+    </div>
+  </div>
+
 </section>
 </div>
 </div>
@@ -1455,12 +1976,40 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
   </div>
 </div>
 
+<!-- CHANGELOG -->
+<div class="changelog-section">
+  <div class="changelog-inner">
+    <h3>Changelog — version history</h3>
+    <div class="changelog-entry">
+      <div class="cl-date">March 2026</div>
+      <div class="cl-note">
+        <span class="cl-badge cl-new">New</span> Version 2.0. Added differentiated reader pathways, prompting principles section, critical appraisal of AI output section, and practical exercises for each use-case chapter.
+        <span class="cl-badge cl-new">New</span> Agentic browsers section added, covering Comet and the emerging browser landscape.
+        <span class="cl-badge cl-new">New</span> Microsoft Copilot added as sixth tool, with NHS context and M365 guidance.
+        <span class="cl-badge cl-updated">Updated</span> NotebookLM deep-dive updated to reflect interactive audio, mind maps, data tables, slide generation, and Deep Research features (all new since v1.0).
+        <span class="cl-badge cl-updated">Updated</span> Perplexity updated to reflect Deep Research, Model Council, and subscription-first model.
+        <span class="cl-badge cl-updated">Updated</span> All pricing converted to GBP throughout.
+      </div>
+    </div>
+    <div class="changelog-entry">
+      <div class="cl-date">January 2026</div>
+      <div class="cl-note">
+        <span class="cl-badge cl-new">New</span> Version 1.0 published. Covered five tools (Perplexity, Claude, Gemini, NotebookLM, ChatGPT) across portfolio, research, QIP, teaching, and organisation sections.
+      </div>
+    </div>
+    <div class="changelog-entry">
+      <div class="cl-date">Next review</div>
+      <div class="cl-note" style="color:var(--accent); font-weight:500; font-family:'Outfit',sans-serif; font-size:0.88rem;">Scheduled September 2026. AI tool capabilities change rapidly — this guide will be reviewed and updated every six months. If you notice an inaccuracy or a significant tool update before then, please contact WMEBEM.</div>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">AI Tools for Emergency Medicine Doctors</div>
   <p>Written by Dr Jake Turner, ST6 Emergency Medicine, Birmingham Heartlands Hospital.</p>
-  <p>West Midlands Evidence Based Emergency Medicine (WMEBEM) · Written with AI assistance · 2025–2026</p>
-  <p style="margin-top:0.6rem;">Content reflects the evidence base as of March 2026. Always verify outputs against current NICE, BNF, and RCEM guidance.</p>
+  <p>West Midlands Evidence Based Emergency Medicine (WMEBEM) · Written with AI assistance · Version 2.0 · March 2026</p>
+  <p style="margin-top:0.6rem;">Content reflects the evidence base as of March 2026. Next scheduled review: September 2026. Always verify outputs against current NICE, BNF, and RCEM guidance.</p>
   <p style="margin-top:0.4rem; font-size:0.7rem; opacity:0.6;">Never enter patient-identifiable data into any consumer AI tool. The clinician remains responsible for all professional decisions. AI is a tool, not a substitute for professional judgement.</p>
 </footer>
 
