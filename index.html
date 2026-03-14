@@ -25,14 +25,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 17px; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   background: var(--cream);
   color: var(--ink);
   font-family: 'Source Serif 4', Georgia, serif;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 1.85;
   overflow-x: hidden;
 }
 
@@ -215,11 +215,11 @@ nav {
 
 /* PROSE */
 .prose h3 {
-  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+  font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700;
   margin: 2.25rem 0 0.55rem; color: var(--ink);
 }
 .prose h3:first-child { margin-top: 0; }
-.prose p { font-size: 0.94rem; color: var(--ink2); line-height: 1.9; margin-bottom: 0.9rem; font-weight: 300; }
+.prose p { font-size: 1rem; color: var(--ink2); line-height: 1.95; margin-bottom: 1.1rem; font-weight: 300; }
 .prose p strong { color: var(--ink); font-weight: 600; }
 
 /* PROMPT */
@@ -245,7 +245,7 @@ nav {
 .pt.chatgpt    { background: rgba(16,163,127,0.12);  color: var(--chatgpt); }
 .pt.copilot    { background: rgba(85,88,175,0.12);   color: var(--copilot); }
 
-.prompt-text { font-family: 'Outfit', sans-serif; font-size: 0.84rem; color: var(--ink); line-height: 1.72; font-weight: 400; }
+.prompt-text { font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: var(--ink); line-height: 1.78; font-weight: 400; }
 .prompt-text em { color: var(--ink3); font-style: italic; }
 
 /* INLINE TOOL LABEL */
@@ -272,10 +272,10 @@ nav {
 }
 .sidebar-box ul { list-style: none; padding: 0; }
 .sidebar-box ul li {
-  font-size: 0.83rem; color: var(--ink2); padding: 0.35rem 0;
+  font-size: 0.9rem; color: var(--ink2); padding: 0.4rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.04);
   display: flex; align-items: flex-start; gap: 0.5rem;
-  font-weight: 300; line-height: 1.55;
+  font-weight: 300; line-height: 1.6;
 }
 .sidebar-box ul li:last-child { border-bottom: none; }
 .li-i { flex-shrink: 0; font-size: 0.7rem; margin-top: 0.15rem; color: var(--accent); font-weight: 700; }
@@ -302,14 +302,14 @@ nav {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .step-body h4 {
-  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.92rem;
   color: var(--ink); margin-bottom: 0.25rem;
   display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
 }
-.step-body p { font-size: 0.86rem; color: var(--ink2); line-height: 1.7; font-weight: 300; }
+.step-body p { font-size: 0.9rem; color: var(--ink2); line-height: 1.75; font-weight: 300; }
 
 /* TABLE */
-.uc-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 1.4rem 0; }
+.uc-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 1.4rem 0; }
 .uc-table th {
   font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.68rem;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3);
@@ -375,10 +375,10 @@ nav {
   width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 0.45rem;
 }
 .cap-content h5 {
-  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.92rem;
   color: var(--ink); margin-bottom: 0.2rem;
 }
-.cap-content p { font-size: 0.84rem; color: var(--ink2); font-weight: 300; line-height: 1.6; margin: 0; }
+.cap-content p { font-size: 0.9rem; color: var(--ink2); font-weight: 300; line-height: 1.7; margin: 0; }
 
 .quick-guide {
   background: var(--cream); border: 1px solid var(--rule);
@@ -401,7 +401,43 @@ nav {
   color: var(--white); width: 1.5rem; height: 1.5rem; border-radius: 50%;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.qg-text { font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: var(--ink2); font-weight: 400; line-height: 1.55; }
+.qg-text { font-family: 'Outfit', sans-serif; font-size: 0.88rem; color: var(--ink2); font-weight: 400; line-height: 1.6; }
+
+/* AGENTIC BROWSERS */
+.agentic-intro { font-size: 1rem; color: var(--ink2); line-height: 1.95; font-weight: 300; margin-bottom: 2rem; max-width: 700px; }
+
+.browser-feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 1.5rem 0; }
+.browser-feature { background: var(--white); padding: 1.5rem; }
+.browser-feature h5 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--ink); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+.browser-feature p { font-size: 0.9rem; color: var(--ink2); line-height: 1.75; font-weight: 300; margin: 0; }
+
+.security-warning {
+  background: #FEF2F2; border: 1px solid #FECACA; border-left: 4px solid #DC2626;
+  padding: 1.25rem 1.5rem; margin: 2rem 0;
+}
+.security-warning h5 {
+  font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.78rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #991B1B; margin-bottom: 0.5rem;
+}
+.security-warning p { font-size: 0.92rem; color: #7F1D1D; line-height: 1.8; font-weight: 300; margin: 0; }
+.security-warning p + p { margin-top: 0.6rem; }
+
+.browser-others-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 1.5rem; }
+.browser-other { background: var(--white); padding: 1.25rem; }
+.browser-other h5 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink); margin-bottom: 0.35rem; }
+.browser-other p { font-size: 0.88rem; color: var(--ink2); line-height: 1.7; font-weight: 300; margin: 0; }
+.status-tag {
+  font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.55rem;
+  border-radius: 1rem; display: inline-block; margin-bottom: 0.5rem;
+}
+.tag-early  { background: rgba(212,168,83,0.12); color: #92630A; border: 1px solid rgba(212,168,83,0.3); }
+.tag-coming { background: rgba(66,133,244,0.1);  color: var(--gemini); border: 1px solid rgba(66,133,244,0.25); }
+
+@media (max-width: 680px) {
+  .browser-feature-grid { grid-template-columns: 1fr; }
+  .browser-others-grid  { grid-template-columns: 1fr; }
+}
 
 /* GETTING STARTED */
 .get-started { background: var(--accent); color: var(--white); padding: 4.5rem 2.5rem; }
@@ -464,6 +500,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#organisation">Organisation</a></li>
     <li><a href="#deep-dive">Tool Guides</a></li>
+    <li><a href="#agentic">Agentic Browsers</a></li>
     <li><a href="#start">Get Started</a></li>
   </ul>
 </nav>
@@ -511,37 +548,37 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <span class="tool-card-name">Perplexity</span>
         <p class="tool-card-tagline">A search engine that reasons and cites. Every answer links to its source. Best for finding current evidence and keeping up to date.</p>
         <span class="tool-card-best">Research & Literature</span>
-        <span class="tool-card-cost">Free · Pro $20/mo</span>
+        <span class="tool-card-cost">Free · Pro £16/month</span>
       </div>
       <div class="tool-card tc-claude">
         <span class="tool-card-name">Claude</span>
         <p class="tool-card-tagline">The most capable writer and analyst. Exceptionally good with long documents, nuanced writing, and complex reasoning tasks.</p>
         <span class="tool-card-best">Writing & Documents</span>
-        <span class="tool-card-cost">Free · Pro $20/mo</span>
+        <span class="tool-card-cost">Free · Pro £16/month</span>
       </div>
       <div class="tool-card tc-gemini">
         <span class="tool-card-name">Gemini</span>
         <p class="tool-card-tagline">Google's AI, integrated directly into Gmail, Docs, Sheets, Slides, and Drive. The best choice if you work in Google Workspace.</p>
         <span class="tool-card-best">Google Workspace</span>
-        <span class="tool-card-cost">Free · Advanced $20/mo</span>
+        <span class="tool-card-cost">Free · Advanced £16/month</span>
       </div>
       <div class="tool-card tc-notebooklm">
         <span class="tool-card-name">NotebookLM</span>
         <p class="tool-card-tagline">Upload your documents and it becomes an expert on them. Generates podcast audio, mind maps, flashcards, and quizzes from your sources.</p>
         <span class="tool-card-best">Revision & Guidelines</span>
-        <span class="tool-card-cost">Free · AI Pro $20/mo</span>
+        <span class="tool-card-cost">Free · AI Pro £16/month</span>
       </div>
       <div class="tool-card tc-chatgpt">
         <span class="tool-card-name">ChatGPT</span>
         <p class="tool-card-tagline">The most versatile tool. Particularly powerful for data analysis — upload a spreadsheet and it analyses it without any coding knowledge required.</p>
         <span class="tool-card-best">Data Analysis & QI</span>
-        <span class="tool-card-cost">Free · Plus $20/mo</span>
+        <span class="tool-card-cost">Free · Plus £16/month</span>
       </div>
       <div class="tool-card tc-copilot">
         <span class="tool-card-name">Copilot</span>
         <p class="tool-card-tagline">Microsoft's AI, embedded across the entire Office suite. Most NHS trusts already have M365 — this may be available to you at no extra cost.</p>
         <span class="tool-card-best">Microsoft / NHS M365</span>
-        <span class="tool-card-cost">Free with M365 · £24+/mo full</span>
+        <span class="tool-card-cost">Free with M365 · £24+/month full</span>
       </div>
     </div>
   </div>
@@ -843,7 +880,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">An AI-powered answer engine that searches the web in real time and cites every claim. Described as the tool that makes "the blue link feel like a relic."</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge free">Free tier available</span>
-          <span class="cost-badge paid">Pro $20/mo</span>
+          <span class="cost-badge paid">Pro £16/month</span>
           <span class="cost-badge">perplexity.ai</span>
         </div>
       </div>
@@ -905,7 +942,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">Anthropic's AI assistant. Widely regarded as the most capable model for writing, reasoning, and reading long documents. The current version on claude.ai is Claude Sonnet 4.6.</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge free">Free tier</span>
-          <span class="cost-badge paid">Pro $20/mo</span>
+          <span class="cost-badge paid">Pro £16/month</span>
           <span class="cost-badge">claude.ai</span>
         </div>
       </div>
@@ -967,7 +1004,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">Google's AI, most powerful when used within Google Workspace. Integrated directly into Gmail, Docs, Sheets, Slides, Drive, and Meet — the productivity AI for anyone already in the Google ecosystem.</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge free">Free tier</span>
-          <span class="cost-badge paid">Advanced $20/mo</span>
+          <span class="cost-badge paid">Advanced £16/month</span>
           <span class="cost-badge">gemini.google.com</span>
         </div>
       </div>
@@ -1028,7 +1065,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">Google's source-grounded research assistant. Upload your documents and it becomes an expert on exactly those documents — and cannot hallucinate references it hasn't been given. Has evolved significantly through 2025 and early 2026.</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge free">Free (100 notebooks, 50 queries/day)</span>
-          <span class="cost-badge paid">AI Pro $20/mo</span>
+          <span class="cost-badge paid">AI Pro £16/month</span>
           <span class="cost-badge">notebooklm.google.com</span>
         </div>
       </div>
@@ -1099,7 +1136,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">OpenAI's flagship AI assistant. The most widely used AI tool globally. Particularly powerful for data analysis through its Code Interpreter feature, which writes and runs code from natural language descriptions.</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge free">Free tier</span>
-          <span class="cost-badge paid">Plus $20/mo</span>
+          <span class="cost-badge paid">Plus £16/month</span>
           <span class="cost-badge">chatgpt.com</span>
         </div>
       </div>
@@ -1161,7 +1198,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
         <p class="tool-article-tagline">Microsoft's AI, embedded across the entire Microsoft 365 suite. The most important AI tool for many NHS staff because most NHS trusts run on Microsoft 365 — and Copilot Chat is now included in qualifying M365 licences at no extra cost.</p>
         <div class="tool-article-cost-row">
           <span class="cost-badge nhs">Copilot Chat: free with M365</span>
-          <span class="cost-badge paid">Full Copilot: £24+/user/mo</span>
+          <span class="cost-badge paid">Full Copilot: £24+/user/month</span>
           <span class="cost-badge">microsoft365.com/copilot</span>
         </div>
       </div>
@@ -1222,6 +1259,170 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
 </div>
 </div>
 
+<!-- ═══════════════════════════════════════ AGENTIC BROWSERS ═══════ -->
+<div id="agentic" class="alt-bg">
+<div class="page-wrap">
+<section class="main-section">
+
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <div>
+      <span class="section-label">Agentic Browsers</span>
+      <h2 class="section-title">What if your browser could just do things for you?</h2>
+      <p class="section-intro-text">Agentic browsers are the newest development in AI tooling. Rather than answering questions, they actively operate the web on your behalf — navigating pages, filling forms, drafting emails, and completing multi-step tasks while you focus on something else. This is early technology, and it comes with real limitations and risks that are worth understanding before you try it.</p>
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="prose">
+
+      <h3>What "agentic" actually means</h3>
+      <p>Every AI tool discussed in this guide so far is a conversational assistant — you ask, it responds. An agentic tool goes further: it takes actions. It can open a web page, read what is on it, click a link, fill in a form, open your email, draft a reply, and send it — all in sequence, in response to a single instruction from you. Think of it less like a calculator and more like having a capable assistant who can take over your keyboard.</p>
+      <p>This capability is genuinely new. The first usable consumer agentic browser — Perplexity's Comet — launched in July 2025. Others are following. We are at a very early stage, and the technology is not yet reliable enough for any task where an error would have serious consequences.</p>
+
+      <h3>Comet — the Perplexity AI browser</h3>
+      <p><span class="tl perplexity">Comet</span> is a web browser built by Perplexity, based on Chromium (the same engine underlying Google Chrome). This means it looks and feels like a familiar browser, supports your existing Chrome extensions, and imports your bookmarks, history, and passwords from Chrome in a few clicks. What distinguishes it is the AI assistant built into its core — powered by Perplexity's search engine and, for Max subscribers, the Claude Opus 4.6 model.</p>
+
+      <p>It launched on desktop in July 2025, became free to all Perplexity account holders in October 2025, launched on Android in November 2025, and arrived on iOS on 18 March 2026. As of now, the basic browser and its agent mode are free — you only need a Perplexity account.</p>
+
+      <div class="browser-feature-grid">
+        <div class="browser-feature">
+          <h5>🔍 Highlighted text — instant answers</h5>
+          <p>Highlight any text on any webpage and get an instant Perplexity-powered explanation, definition, or related context — without leaving the page or opening a new tab. Particularly useful when reading a complex guideline or research paper.</p>
+        </div>
+        <div class="browser-feature">
+          <h5>📑 Cross-tab synthesis</h5>
+          <p>Ask Comet to summarise and compare content across all your open tabs simultaneously. Useful when you have several papers, guidelines, or policy documents open and want a synthesis without reading each one in full.</p>
+        </div>
+        <div class="browser-feature">
+          <h5>🤖 Browser agent — takes actions on your behalf</h5>
+          <p>The core agentic feature. Give Comet a task in natural language — "find the three most recent systematic reviews on point-of-care lactate measurement and summarise their conclusions" — and it will search, navigate, read, and compile a report for you. It shows every action it is taking, and you can intervene at any point.</p>
+        </div>
+        <div class="browser-feature">
+          <h5>📅 Calendar and email integration</h5>
+          <p>Comet can connect to your calendar and email to carry out tasks contextually — "draft a reply to the last email from my educational supervisor" or "check if I have any clinical governance commitments next week." Requires connecting your accounts.</p>
+        </div>
+        <div class="browser-feature">
+          <h5>🎙️ Voice mode</h5>
+          <p>On Android and desktop, you can speak to the Comet assistant directly. Ask questions or give instructions verbally. Useful for hands-free queries or when dictating rough notes you want turned into a structured document.</p>
+        </div>
+        <div class="browser-feature">
+          <h5>🧠 Personalised preferences memory</h5>
+          <p>Comet remembers your stated preferences and uses them when completing tasks — if you tell it you prefer concise summaries in a particular format, it applies this automatically to subsequent tasks without you needing to repeat it.</p>
+        </div>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-label">Example tasks for Comet's agent mode <span class="pt perplexity">Comet</span></div>
+        <div class="prompt-text">
+          "Search for any RCEM publications or position statements from the last six months and summarise what is new."<br><br>
+          "I have five tabs open with papers on frailty scoring in the ED. Summarise the key findings of each and identify where they agree and disagree."<br><br>
+          "Find the current NICE guidance on sepsis management and produce a one-page summary of the ED-relevant recommendations."
+        </div>
+      </div>
+
+      <div class="security-warning">
+        <h5>⚠ Security and safety considerations — please read before using</h5>
+        <p>Agentic browsers are powerful precisely because they can take real actions on your behalf. This is also what makes them risky. A misunderstood instruction can trigger a chain of unintended actions — sending an email you didn't intend, submitting a form, or making a booking. Cybersecurity researchers have identified a specific vulnerability in Comet called <strong>CometJacking</strong>, in which malicious content on a webpage could potentially instruct the browser agent to exfiltrate sensitive data. Perplexity was notified of this in August 2025; verify their current response before relying on the browser for sensitive tasks.</p>
+        <p>For professional use: <strong>never connect your NHS or Trust email account to Comet or any agentic browser.</strong> Do not use agent mode on pages containing any patient or staff information. Do not give agent mode access to any systems containing confidential data. Use it only for tasks involving publicly available information — literature searching, summarising open-access guidelines, and research browsing.</p>
+      </div>
+
+      <h3>Other agentic browsers to be aware of</h3>
+      <p>Comet is the first widely available agentic browser, but it will not be the only one. The market is moving quickly.</p>
+
+      <div class="browser-others-grid">
+        <div class="browser-other">
+          <span class="status-tag tag-coming">In development</span>
+          <h5>OpenAI Browser</h5>
+          <p>OpenAI is widely reported to be developing an AI-native browser. Expected to integrate deeply with ChatGPT and the operator agent framework. No confirmed release date as of early 2026.</p>
+        </div>
+        <div class="browser-other">
+          <span class="status-tag tag-early">Early access</span>
+          <h5>Dia — The Browser Company</h5>
+          <p>An AI-native browser from the makers of Arc. Currently in limited release. Takes a similar approach to Comet with a built-in AI assistant, though with a different interface philosophy.</p>
+        </div>
+        <div class="browser-other">
+          <span class="status-tag tag-early">Available now</span>
+          <h5>Microsoft Edge with Copilot</h5>
+          <p>Microsoft Edge already includes Copilot as a browser sidebar — it can summarise pages, compare products, and assist with writing in-context. Less fully agentic than Comet, but more mature and appropriate for NHS use where M365 is the standard environment.</p>
+        </div>
+      </div>
+
+      <h3>Practical uses for EM doctors — with appropriate caution</h3>
+      <p>Despite the caveats, there are genuinely useful, low-risk applications of agentic browsing for professional work. The key is to use it only for tasks involving publicly available information, to review every action before it is executed, and to never connect it to clinical or confidential systems.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">✓</div>
+          <div class="step-body">
+            <h4>Literature trawling</h4>
+            <p>Ask Comet to search for recent publications on a specific clinical topic, open the most relevant papers, and compile a structured summary of findings — saving you an hour of manual searching and tab management.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">✓</div>
+          <div class="step-body">
+            <h4>Guideline monitoring</h4>
+            <p>Ask Comet to check the NICE, RCEM, and BNF websites for updates on topics relevant to your practice or current QIP, and summarise anything new since a specified date.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">✓</div>
+          <div class="step-body">
+            <h4>Cross-tab synthesis for journal club</h4>
+            <p>Open four or five papers related to a journal club topic, then ask Comet to read all of them and produce a structured comparison of their populations, methods, results, and limitations.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">✗</div>
+          <div class="step-body">
+            <h4>Do not use for: anything involving confidential data</h4>
+            <p>Do not connect NHS email, clinical systems, or Trust SharePoint to any agentic browser. Do not use agent mode on pages containing patient information or identifiable staff data. The technology is not mature enough for this, and the data governance implications remain unresolved.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>Comet at a glance</h4>
+        <ul>
+          <li><span class="li-i">✓</span>Free to all Perplexity account holders</li>
+          <li><span class="li-i">✓</span>Available on Windows, macOS, Android, iOS (March 2026)</li>
+          <li><span class="li-i">✓</span>Chromium-based — Chrome extensions work</li>
+          <li><span class="li-i">✓</span>Import bookmarks/passwords from Chrome easily</li>
+          <li><span class="li-i">✓</span>Agent mode free — no paid tier required</li>
+          <li><span class="li-i">✓</span>Shows every action before/during execution</li>
+          <li><span class="li-i">⚠</span>CometJacking vulnerability — do not use on sensitive pages</li>
+          <li><span class="li-i">⚠</span>Still early-stage — errors and misinterpretations occur</li>
+          <li><span class="li-i">✗</span>Do not connect to NHS or clinical systems</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-box">
+        <h4>How to get started</h4>
+        <ul>
+          <li><span class="li-i">1</span>Download from perplexity.ai/comet (free, Windows/macOS/iOS/Android)</li>
+          <li><span class="li-i">2</span>Sign in with your Perplexity account (or create one free)</li>
+          <li><span class="li-i">3</span>Import bookmarks and settings from Chrome during setup</li>
+          <li><span class="li-i">4</span>Try highlighting text on a research paper — click the Perplexity icon that appears</li>
+          <li><span class="li-i">5</span>Open several papers on a topic and ask the assistant to summarise across all tabs</li>
+          <li><span class="li-i">6</span>Try one agent task: "Search for recent RCEM updates and summarise them"</li>
+        </ul>
+      </div>
+
+      <div class="highlight">
+        <h4>The honest verdict</h4>
+        <p>Comet is genuinely impressive and occasionally shockingly useful for literature searching and multi-tab synthesis. It is also unfinished and still makes errors. The right mental model is: a capable but junior assistant you need to supervise, not a fully reliable autonomous agent. Review every action it proposes before letting it execute.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+</div>
+</div>
+
 <!-- GET STARTED -->
 <div id="start" class="get-started">
   <div class="gs-inner">
@@ -1233,7 +1434,7 @@ footer p { font-size: 0.76rem; color: var(--ink3); line-height: 1.7; max-width: 
       <div class="gs-step">
         <div class="gs-step-num">Step one</div>
         <div class="gs-step-title">Check what you already have</div>
-        <div class="gs-step-desc">Ask your Trust IT team what Copilot features are enabled in your M365 account. You may already have AI capabilities in Outlook, Word, and Teams at no extra cost.</div>
+        <div class="gs-step-desc">Ask your Trust IT team what Copilot features are enabled in your M365 account. You may already have AI in Outlook, Word, and Teams at no extra cost. Also download Comet (free) from perplexity.ai/comet — it takes five minutes and costs nothing.</div>
       </div>
       <div class="gs-step">
         <div class="gs-step-num">Step two</div>
